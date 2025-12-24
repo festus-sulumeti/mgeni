@@ -1,72 +1,34 @@
-function Hotelgallery() {
+import { BlurFade } from "@/components/ui/blur-fade"
+
+// Import your local images
+import img1 from "../../assets/Gallery /1.jpeg"
+import img2 from "@/assets/Gallery /2.jpeg"
+import img3 from "@/assets/Gallery /3.jpeg"
+import img4 from "@/assets/Gallery /4.jpeg"
+import img5 from "@/assets/Gallery /5.jpeg"
+import img6 from "@/assets/Gallery /6.jpeg"
+// import img7 from "@/assets/Gallery /7.jpeg"
+// import img8 from "@/assets/Gallery /8.jpeg"
+// import img9 from '@/assets/Gallery /9.jpeg';
+
+
+// Put them in an array
+const images = [img1, img2, img3, img4, img5, img6]
+
+export default function HotelGallery() {
   return (
-    <>
-      <section>
-        <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            <div className="space-y-2">
-              <img 
-                className="w-full h-auto object-cover" 
-                src="https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" 
-                alt="Gallery Masonry Image"
-              />
-              <img 
-                className="w-full h-auto object-cover" 
-                src="https://images.unsplash.com/photo-1668906093328-99601a1aa584?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" 
-                alt="Gallery Masonry Image"
-              />
-              <img 
-                className="w-full h-auto object-cover" 
-                src="https://images.unsplash.com/photo-1567016526105-22da7c13161a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" 
-                alt="Gallery Masonry Image"
-              />
-            </div>
-            <div className="space-y-2">
-              <img 
-                className="w-full h-auto object-cover" 
-                src="https://images.unsplash.com/photo-1668584054131-d5721c515211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" 
-                alt="Gallery Masonry Image"
-              />
-              <img 
-                className="w-full h-auto object-cover" 
-                src="https://images.unsplash.com/photo-1664574654529-b60630f33fdb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" 
-                alt="Gallery Masonry Image"
-              />
-            </div>
-            <div className="space-y-2">
-              <img 
-                className="w-full h-auto object-cover" 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" 
-                alt="Gallery Masonry Image"
-              />
-              <img 
-                className="w-full h-auto object-cover" 
-                src="https://images.unsplash.com/photo-1586232702178-f5ba7d426401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" 
-                alt="Gallery Masonry Image"
-              />
-              <img 
-                className="w-full h-auto object-cover" 
-                src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" 
-                alt="Gallery Masonry Image"
-              />
-            </div>
-            <div className="space-y-2">
-              <img 
-                className="w-full h-auto object-cover" 
-                src="https://images.unsplash.com/photo-1669713513291-9bcbb0da7171?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" 
-                alt="Gallery Masonry Image"
-              />
-              <img 
-                className="w-full h-auto object-cover" 
-                src="https://images.unsplash.com/photo-1668584054035-f5ba7d426401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" 
-                alt="Gallery Masonry Image"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <section id="photos" className="py-10">
+      <div className="columns-2 gap-4 sm:columns-3">
+        {images.map((imageUrl, idx) => (
+          <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
+            <img
+              className="mb-4 w-full rounded-lg object-cover"
+              src={imageUrl}
+              alt={`RenderCon Kenya photo ${idx + 1}`}
+            />
+          </BlurFade>
+        ))}
+      </div>
+    </section>
   )
 }
-
-export default Hotelgallery
