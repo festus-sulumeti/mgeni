@@ -54,6 +54,15 @@ export function SignupForm({
             Already have an account? <Link to="/signin" className="text-black">Sign in</Link>
           </FieldDescription>
         </Field>
+         <Field>
+        
+          <FieldDescription className="text-center text-black">
+            Get back to home?{" "}
+            <Link to="/" className="underline underline-offset-4 text-black">
+              Home
+            </Link>
+          </FieldDescription>
+        </Field>
       </FieldGroup>
     </form>
   )
