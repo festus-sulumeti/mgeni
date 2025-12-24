@@ -25,7 +25,7 @@ export function SignupForm({
         </div>
         <Field>
           <FieldLabel htmlFor="name">Full Name</FieldLabel>
-          <Input id="name" type="text" placeholder="John Doe" required />
+          <Input id="name" type="text" placeholder="John Kamau" required />
         </Field>
         <Field>
           <FieldLabel htmlFor="email">Email</FieldLabel>
@@ -45,7 +45,7 @@ export function SignupForm({
           <FieldDescription>Please confirm your password.</FieldDescription>
         </Field>
         <Field>
-          <Button type="submit" className="bg-[#ff0]">Create Account</Button>
+          <Button type="submit" className="bg-[#ff0] text-black">Create Account</Button>
         </Field>
         
         <Field>
