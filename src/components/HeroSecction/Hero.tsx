@@ -1,6 +1,7 @@
 import Navbar from "./Navbar"
 import Hotelgallery from "./Hotelgallery"
 import { Link } from "react-router-dom"
+import Footer from "./Footer"
 
 function Hero() {
   return (
@@ -147,6 +148,8 @@ function Hero() {
        </section>
 
        <Hotelgallery />
+
+       <Footer />
 
     </>
   )
