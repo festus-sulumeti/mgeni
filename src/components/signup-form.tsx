@@ -51,7 +51,7 @@ export function SignupForm({
         <Field>
          
           <FieldDescription className="px-6 text-center text-black">
-            Already have an account? <Link to="signin" className="text-black">Sign in</Link>
+            Already have an account? <Link to="/signin" className="text-black">Sign in</Link>
           </FieldDescription>
         </Field>
       </FieldGroup>
